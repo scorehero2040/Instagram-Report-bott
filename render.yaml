@@ -1,0 +1,12 @@
+services:
+  - name: instagram-report-bot
+    type: worker
+    runtime: python
+    repo: https://github.com/ifeelscam/Instagram-Report-bot
+    envVars:
+      - key: assasi870
+        value: "your_instagram_username"
+      - key: scorehero.com
+        value: "your_instagram_password"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
